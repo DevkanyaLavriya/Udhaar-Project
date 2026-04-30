@@ -20,9 +20,9 @@ export function AppLayout() {
       <div className="pointer-events-none fixed inset-0 bg-gradient-cool" />
 
       <AppSidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
-      <div className="flex-1 flex flex-col min-w-0 relative z-10">
-        <header className="sticky top-0 z-30 h-16 lg:h-20 border-b border-border/50 bg-background/70 backdrop-blur-xl flex items-center px-4 lg:px-8 gap-3">
+      
+      <div className="flex-1 flex flex-col h-screen min-w-0 relative z-10 overflow-hidden">
+        <header className="shrink-0 h-16 lg:h-20 border-b border-border/50 bg-background/70 backdrop-blur-xl flex items-center px-4 lg:px-8 gap-3">
           <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setSidebarOpen(true)} aria-label="Open menu">
             <Menu className="size-5" />
           </Button>
@@ -40,9 +40,9 @@ export function AppLayout() {
           <div className="flex-1 sm:hidden" />
 
           <div className="flex items-center gap-1.5">
-            <Button
-              size="sm"
-              onClick={() => setTxnOpen(true)}
+            <Button 
+              size="sm" 
+              onClick={() => setTxnOpen(true)} 
               className="hidden sm:inline-flex bg-gradient-primary hover:opacity-90 text-primary-foreground shadow-glow-saffron rounded-xl gap-2 transition-smooth hover:scale-[1.02]"
             >
               <Plus className="size-4" /> New Entry
@@ -55,8 +55,10 @@ export function AppLayout() {
           </div>
         </header>
 
-        <main className="flex-1 animate-fade-in">
-          <Outlet />
+        <main className="flex-1 overflow-y-auto overflow-x-hidden animate-fade-in custom-scrollbar">
+          <div className="min-h-full pb-20">
+            <Outlet />
+          </div>
         </main>
       </div>
 

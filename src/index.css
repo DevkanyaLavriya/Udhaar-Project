@@ -156,8 +156,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html, body {
+    @apply bg-background text-foreground overflow-hidden;
+    height: 100%;
     font-feature-settings: "ss01", "cv11";
   }
 
