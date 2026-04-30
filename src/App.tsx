@@ -1,3 +1,4 @@
+// Build trigger: 2026-04-30 17:26
 // Trigger build 2
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
