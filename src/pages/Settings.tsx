@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 const Settings = () => {
   const { session, logout, reminderSettings, updateReminderSettings, updateProfile } = useStore();

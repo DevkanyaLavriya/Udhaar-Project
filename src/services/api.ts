@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { Customer, Transaction } from '@/lib/mock-data';
 import type { ReminderSettings, ReminderLog } from '@/lib/store';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5005/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://udhaar-project-2ugq.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
